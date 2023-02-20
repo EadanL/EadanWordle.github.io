@@ -1,0 +1,243 @@
+html,
+body {
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.toggle-darkmode {
+	background-color: var(--darkmode);
+}
+
+header {
+	min-height: 50px;
+}
+
+footer {
+	min-height: 50px;
+}
+
+main {
+	flex: 1;
+	justify-content: center;
+}
+
+img {
+	justify-self: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* NAV */
+header {
+	border-top: solid 3px mediumpurple;
+	border-bottom: solid 1px lightgray;
+}
+
+header nav {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-areas: "col1 col2 col3";
+}
+
+header nav h1 {
+	grid-area: col2;
+	text-align: center;
+	font-size: x-large;
+}
+
+header nav ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	align-items: center;
+	grid-area: col3;
+	justify-self: end;
+}
+
+header nav ul li button {
+	background: none;
+	border: none;
+	font-size: 24px;
+	margin: 0 20px;
+}
+
+/* GRID STYLES */
+
+:root {
+	--blank: white;
+	--wrong: rgb(161, 159, 159);
+	--included: orange;
+	--right: rgba(93, 238, 93, 0.491);
+	--darkmode: darkgray;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+}
+
+#container .instructions {
+	overflow: hidden;
+	width: 0;
+	opacity: 0;
+	box-sizing: border-box;
+	padding: 0 0 0 0px;
+}
+
+#container .instructions.open {
+	width: 50%;
+	padding: 0 0 0 40px;
+	opacity: 1;
+}
+
+#grid {
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+	/* grid-template-columns: repeat(4, auto); */
+}
+
+#grid .word {
+	display: flex;
+}
+
+.box {
+	width: 75px;
+	height: 75px;
+	border: solid 1px lightgray;
+	margin: 2px;
+	text-transform: uppercase;
+	display: grid;
+	place-items: center;
+	font-size: 2.5rem;
+}
+
+.box.blank {
+	background: var(--blank);
+}
+
+.box.wrong {
+	background: var(--wrong);
+}
+
+.box.included {
+	background: var(--included);
+}
+
+.box.right {
+	background: var(--right);
+}
+
+.start-over-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button.start-over {
+	width: 150px;
+	height: 40px;
+	font-size: large;
+	border-radius: 5px;
+	color: white;
+	background-color: mediumpurple;
+	border: none;
+	text-decoration-color: white;
+}
+
+button.start-over:hover {
+	background-color: rgb(124, 93, 185);
+}
+
+button.start-over:active {
+	transform: translateY(4px);
+}
+
+#keypress-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+#keypress {
+	display: flex;
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	min-width: 75px;
+	min-height: 75px;
+	margin: 0;
+	padding: 0;
+	border-radius: 10px;
+	border: solid 1px black;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	background-color: rgba(0, 0, 0, 0.596);
+	color: white;
+}
+
+#player-message {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 50px;
+	display: none;
+	background-color: lightgray;
+}
+
+#player-message p {
+	margin: 0;
+}
+
+#player-message.visible {
+	display: flex;
+}
+#player-message.lose {
+	display: flex;
+	color: white;
+	background-color: red;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: solid 1px lightgray;
+	font-size: smaller;
+	font-weight: 100;
+	bottom: 0;
+}
+
+body.dark {
+	color: #fff;
+	background-color: rgb(29, 28, 28);
+}
+
+body.dark .box {
+	color: #fff;
+}
+
+body.dark button {
+	color: white;
+}
+
+#congrats-message {
+	display: none;
+}

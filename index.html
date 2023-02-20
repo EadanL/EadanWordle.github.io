@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Wordle</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<header>
+		<nav>
+			<h1>Wordle</h1>
+
+			<ul class="nav-buttons">
+				<li>
+					<button id="dark-mode" class="menu">&#9681;</button>
+				</li>
+				<li>
+					<button id="hint" class="menu">&#63;</button>
+				</li>
+				<li>
+					<button id="info" class="menu">&#9432;</button>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<body>
+		<main id="main">
+			<div id="container">
+				<div id="congrats-message">
+					<img
+						src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif"
+						alt="congrats"
+					/>
+				</div>
+				<div id="grid">
+					<div class="word">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="word">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="word">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="word">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+				</div>
+				<div id="instructions" class="instructions">
+					<h4>How to Play</h4>
+					<ul>
+						<li>Start typing. The letters will appear in the boxes</li>
+						<li>Remove letters with Backspace</li>
+						<li>Hit Enter/Return to submit an answer</li>
+						<li>Letters with green background are in the right spot</li>
+						<li>
+							Letters with orange background exist in the word, but are in the
+							wrong spots
+						</li>
+						<li>Letters with gray background do not exist in the word</li>
+						<li>If you need a hint, click the &#63; icon</li>
+					</ul>
+				</div>
+			</div>
+			<div class="start-over-button">
+				<button type="button" id="start-over" class="start-over">
+					Start Over
+				</button>
+			</div>
+			<div id="keypress-container">
+				<div id="keypress"></div>
+			</div>
+			<div id="player-message"></div>
+		</main>
+		<footer class="menu">&copy; Eadan Lay</footer>
+		<script src="./wordle.js"></script>
+	</body>
+</html>
